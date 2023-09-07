@@ -45,6 +45,29 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Paths
+
+We can use the static paths with small webs by adding the next function creating the possible paths, so Astro creates all this paths on the build time.
+
+```js
+export async function getStaticPaths()  {
+  //call external api to get all ids
+  const launches = await getLatestLaunches()
+
+  return launches.map(launch => {
+    return {
+      params: {
+        id: launch.id
+      }
+    }
+  })
+}
+```
+
+
+For a most dynamic and big project there is the posibility of using the [server side rendering](https://docs.astro.build/es/guides/server-side-rendering/) it can be used as hybrid if we want to use the static paths and the server side rendering in different parts.
+
+
+**In our case, for learning purposes, we are using hybrid and declaring when we want to use the server side rendering.**
