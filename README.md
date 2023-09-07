@@ -1,3 +1,13 @@
+# Description
+
+This is a simple project to test [Astro](https://astro.build)
+It shows a grid of the launches from SpaceX using its v4 [API](https://docs.spacexdata.com/)
+(https://api.spacexdata.com/v5/launches)
+
+
+In addition it uses [TailwindCSS](https://tailwindcss.com/) for styling
+
+
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
