@@ -3,6 +3,7 @@ import HeaderButton from "./HeaderButton.astro";
 import RocketIcon from "../icons/RocketIcon.astro"
 import HistoryIcon from '../icons/HistoryIcon.astro'
 import InfoIcon from '../icons/InfoIcon.astro'
+import Counter from "./Counter";
 ---
 
 
@@ -15,6 +16,8 @@ import InfoIcon from '../icons/InfoIcon.astro'
 			All the information about SpaceX launches in one place.
 		</p>
 	</div>
+	<!-- Persitencia de estado -->
+	<!-- <Counter transition:persist client:visible/> -->
 	<nav class="flex flex-col items-center justify-between w-full text-center sm:flex-row">
 		<HeaderButton href="/">
 			<RocketIcon/>
